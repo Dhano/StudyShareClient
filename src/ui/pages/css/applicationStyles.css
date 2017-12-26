@@ -10,3 +10,34 @@
 #change{
     -fx-fill:#fc3;
 }
+/******************************************************************
+*******************GENERAL BUTTONS*****************************
+******************************************************************/
+.btn-general{
+    //-fx-border: solid 2px white;
+    -fx-border-radius: 0;
+    -fx-padding: 12px 26px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-transform: uppercase;
+}
+
+.btn-white{
+    //-fx-border-color: #fff;
+    -fx-text-fill: #fff;
+}
+
+.btn-white:hover, .btn-white:pressed{
+    -fx-background-color: #fff;
+    -fx-text-fill: #41464B;
+}
+
+.btn-blue{
+    //-fx-border-color: #34C6D3;
+    -fx-text-fill: #34C6D3;
+}
+
+.btn-blue:hover, .btn-blue:pressed{
+    -fx-background-color: #34C6D3;
+    -fx-text-fill: #FFF;
+}

@@ -96,7 +96,7 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
             /*inint pages in pagination*/
             initPageHolder();
             /*init Client core part*/
-            initClientCore();
+            //initClientCore();
         }catch(Exception e){
             System.out.println("Inside initiakize in pagekeeper"+e);
         }
@@ -273,36 +273,42 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
         pageHolder.setVisible(false);
     }
 
-    private void initClientCore(){
-        Comms comms=(Comms) ObjectCacher.getObjectCacher().get(Comms.class);
-
-        comms.setServerRequest(ServerRequestConstants.LIST_REQUEST);
-
+    public void initClientCore(){
+        try {
+            Comms comms = (Comms) ObjectCacher.getObjectCacher().get(Comms.class);
 
 
-        commandProperty=new SimpleStringProperty();
-        pathRecieved=new SimpleBooleanProperty();
+            commandProperty = new SimpleStringProperty();
+            pathRecieved = new SimpleBooleanProperty();
 
-        commandProperty.addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+            commandProperty.addListener(new ChangeListener<String>() {
+                @Override
+                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 /*Code for command property*/
-            }
-        });
-
-        pathRecieved.addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if(newValue==true){
-
-                    treeString=commandProperty.getValue();
                 }
-            }
-        });
+            });
 
+            pathRecieved.addListener(new ChangeListener<Boolean>() {
+                public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                    if (newValue == true) {
+                        System.out.println("Path has been received");
+                        treeString = commandProperty.getValue();
+                        System.out.println("Path has been received"+treeString);
+                        showDownload = true;
+                    }
+                }
+            });
 
-        pathRecieved.bindBidirectional(comms.getAccessibleFilePathsRecievedProperty());
-
+            System.out.println("Going to bind it"+comms);
+            if(comms.getAccessibleFilePathsRecievedProperty()==null)
+                System.out.println("OOPS it is NULL");
+            pathRecieved.bindBidirectional(comms.getAccessibleFilePathsRecievedProperty());
+            commandProperty.bindBidirectional(comms.getCommandProperty());
+        }
+        catch (Exception e){
+            System.out.println("Inside Exception of the initCore");
+            e.printStackTrace();
+        }
 
     }
 
@@ -310,8 +316,11 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
 
         if(pageIndex==PageContantsForDashboard.RECENT_PAGE){
             return recent.getRoot();
-        }else if(pageIndex==PageContantsForDashboard.DOWNLOAD_PAGE)
-            return download.getRoot();
+        }else if(pageIndex==PageContantsForDashboard.DOWNLOAD_PAGE) {
+            if(treeString==null)
+                treeString="C:{A,b,c,}";
+            return download.getRoot(treeString);
+        }
 
         return new Button("Dhananjay");
     }

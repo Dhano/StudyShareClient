@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Pagination;
 import javafx.util.Callback;
 import ui.pages.constants.PageConstants;
+import ui.pages.utilities.ObjectCacher;
 
 public class PageKeeper implements PageConstants{
     /*Required objects of pageKeeper.fxml*/
@@ -21,10 +22,9 @@ public class PageKeeper implements PageConstants{
     /*Required object of fxml controllers*/
     Login loginPage;
     Dashboard dashboard;
-    IPAddress ipAddress;
 
     /*Supporting Objects*/
-    FXMLLoader loginFxmlLoader,dashboardFxmlLoader,ipAddressFxmlLoader;
+    FXMLLoader loginFxmlLoader,dashboardFxmlLoader;
 
 
     /*this method will initialize other fxml files cotrollers and add them to pageManager*/
@@ -49,7 +49,7 @@ public class PageKeeper implements PageConstants{
                 }
             });
         }catch(Exception e){
-            System.out.println("Inside initiakize in pagekeeper"+e);
+            System.out.println("Inside initialize in pagekeeper"+e.getMessage());
         }
         System.out.println("End of PageKeeper");
     }
@@ -57,12 +57,6 @@ public class PageKeeper implements PageConstants{
     /*This will init all the pages so that they can be added*/
     private void initPages(){
         try {
-
-            ipAddressFxmlLoader = new FXMLLoader();
-            ipAddressFxmlLoader.setLocation(getClass().getResource("fxml//ipAddress.fxml"));
-            ipAddressFxmlLoader.load();
-            ipAddress= (IPAddress) ipAddressFxmlLoader.getController();
-            ipAddress.setPageKeeper(PageKeeper.this);
 
             loginFxmlLoader = new FXMLLoader();
             loginFxmlLoader.setLocation(getClass().getResource("fxml//login.fxml"));
@@ -74,6 +68,7 @@ public class PageKeeper implements PageConstants{
             dashboardFxmlLoader.setLocation(getClass().getResource("fxml//dashboard.fxml"));
             dashboardFxmlLoader.load();
             dashboard=(Dashboard) dashboardFxmlLoader.getController();
+            ObjectCacher.getObjectCacher().put(Dashboard.class,dashboard);
 
         }catch(Exception e){
             e.printStackTrace();
@@ -82,14 +77,8 @@ public class PageKeeper implements PageConstants{
 
     private Node pageSelector(int pageIndex) {
 
-
-        if(pageIndex==PageConstants.IPADDRESS_PAGE){
-            return ipAddress.getRoot();
-            //return dashboard.getRoot();
-        }
         if(pageIndex==PageConstants.LOGIN_PAGE) {
            return loginPage.getRoot();
-
         }
         else if (pageIndex==PageConstants.DASHBOARD_PAGE){
             return dashboard.getRoot();

@@ -6,13 +6,16 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import de.jensd.fx.glyphs.icons525.Icons525;
 import de.jensd.fx.glyphs.icons525.Icons525View;
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -23,13 +26,22 @@ import ui.pages.constants.BasicController;
 import ui.pages.constants.PageConstants;
 import ui.pages.utilities.ObjectCacher;
 
+import javax.swing.*;
+import java.net.ConnectException;
+import java.net.Socket;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Login implements PageConstants,BasicController{
+
 
     /*Objects fo local fxml*/
     @FXML
+    AnchorPane ipPane;
+    @FXML
     AnchorPane loginRoot;
     @FXML
-    Button btnLogin;
+    Button btnLogin, btnServerIP;
     @FXML
     CustomPasswordField password;
     @FXML
@@ -38,28 +50,31 @@ public class Login implements PageConstants,BasicController{
     Label userlbl;
     @FXML
     Label passwordlbl;
+    @FXML
+    TextField txtIpAddress;
     /*object of other fxml*/
     PageKeeper pageKeeper;
 
     private TranslateTransition userSwipe;
     private TranslateTransition passwordSwipe;
-
+    private TranslateTransition translateTransitionForIPPane;
     /*object used for some use*/
     FXMLLoader fxmlLoader;
 
 
     @FXML protected void initialize(){
+        System.out.println("The vlaue of the location is"+System.getProperty("user.dir"));
         Icons525View lockIcon = new Icons525View(Icons525.LOCK);
         //lockIcon.setStyle("-fx-fill: #8A0808;");
-        lockIcon.setFill(Color.web("#1b2737"));
+        lockIcon.setFill(Color.web("#4ec1e3"));
         lockIcon.setStyle("-glyph-size:28px;");
         FontAwesomeIconView userIcon = new FontAwesomeIconView(FontAwesomeIcon.USER);
-        userIcon.setFill(Color.web("#1b2737"));
+        userIcon.setFill(Color.web("#4ec1e3"));
         userIcon.setStyle("-glyph-size:28px;");
 
 
         FontAwesomeIconView loginIcon = new FontAwesomeIconView(FontAwesomeIcon.SIGN_OUT);
-        loginIcon.setFill(Color.web("#41464b"));
+        loginIcon.setFill(Color.web("#4ec1e3"));
         loginIcon.setStyle("-glyph-size:28px;");
         loginIcon.setId("loginIcon");
         JFXButton jfoenixButton = new JFXButton("JFoenix Button");
@@ -131,7 +146,7 @@ public class Login implements PageConstants,BasicController{
 
     private void reverseUsernameAnimate() {
         if(username.getText().length() < 1) {
-            userSwipe.setFromY(-35);
+            userSwipe.setFromY(-45);
             userSwipe.setToY(0);
             userSwipe.setFromX(-10);
             userSwipe.setToX(0);
@@ -142,7 +157,7 @@ public class Login implements PageConstants,BasicController{
     private void usernameAnimate() {
         if(username.getText().length() < 1) {
             userSwipe.setFromY(0);
-            userSwipe.setToY(-35);
+            userSwipe.setToY(-45);
             userSwipe.setFromX(0);
             userSwipe.setToX(-10);
             userSwipe.play();
@@ -151,7 +166,7 @@ public class Login implements PageConstants,BasicController{
 
     private void reversePasswordAnimate() {
         if(password.getText().length() < 1) {
-            passwordSwipe.setFromY(-35);
+            passwordSwipe.setFromY(-45);
             passwordSwipe.setToY(0);
             passwordSwipe.setFromX(-10);
             passwordSwipe.setToX(0);
@@ -162,7 +177,7 @@ public class Login implements PageConstants,BasicController{
     private void passwordAnimate() {
         if(password.getText().length() < 1) {
             passwordSwipe.setFromY(0);
-            passwordSwipe.setToY(-35);
+            passwordSwipe.setToY(-45);
             passwordSwipe.setFromX(0);
             passwordSwipe.setToX(-10);
             passwordSwipe.play();
@@ -170,6 +185,8 @@ public class Login implements PageConstants,BasicController{
     }
     @FXML protected void validateLogin(ActionEvent ae)
     {
+        username.setText("Ashu");
+        password.setText("helloWorld123");
         Comms c= (Comms) ObjectCacher.getObjectCacher().get(Comms.class);
         try {
             if (validateUsername(ae) && validatePassword(ae)) {
@@ -179,6 +196,8 @@ public class Login implements PageConstants,BasicController{
                 if(c.checkAuthentication(username.getText(),password.getText())) {
                     System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
                     pageKeeper.pageManager.setCurrentPageIndex(PageConstants.DASHBOARD_PAGE);
+                    Dashboard dashboard=(Dashboard) ObjectCacher.getObjectCacher().get(Dashboard.class);
+                    dashboard.initClientCore();
                 }
             } else {
                 System.out.println("Something is wrong plz check again");
@@ -212,10 +231,99 @@ public class Login implements PageConstants,BasicController{
         return loginRoot;
     }
 
+    public void animateOut() {
+        translateTransitionForIPPane =new TranslateTransition(Duration.millis(600),ipPane);
+        translateTransitionForIPPane.setFromY(0.0);
+        translateTransitionForIPPane.setToY(-700.0);
+        translateTransitionForIPPane.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ipPane.setVisible(false);
+            }
+        });
+        translateTransitionForIPPane.play();
+    }
+
     public void setPageKeeper(PageKeeper pg){
         pageKeeper=pg;
     }
 
     public void refreshPage(){
+    }
+
+    public void serverCheck(ActionEvent actionEvent) {
+
+        btnServerIP.setDisable(true);
+        new Thread(){
+            public void run(){
+
+                System.out.println("Inisde call of server check");
+                if(validateAddress()) {
+                    try {
+                        System.out.println("Value of ipAddress is"+txtIpAddress.getText());
+                        Socket user = new Socket(txtIpAddress.getText(), 44444);
+                        System.out.println(user);
+                        Comms c = new Comms(user.getInetAddress());
+                        ObjectCacher.getObjectCacher().put(Comms.class, c);
+
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                new Alert(Alert.AlertType.INFORMATION, "Successfully Connnected").showAndWait();
+                                animateOut();
+                            }
+                        });
+
+                    } catch (ConnectException connect) {
+                        System.out.println("Opps connect Exception");
+                        System.out.println("Something is wrong");
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                new Alert(Alert.AlertType.ERROR, "ConnnectException, IP Maybe Incorrect").showAndWait();
+                                txtIpAddress.setText("");
+                                btnServerIP.setDisable(false);
+                            }
+                        });
+
+                    } catch (Exception e) {
+                        System.out.println("This is exception of someting inside server check");
+                        e.printStackTrace();
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                new Alert(Alert.AlertType.ERROR, "Some other Kind Exception").showAndWait();
+                                txtIpAddress.setText("");
+                                btnServerIP.setDisable(false);
+                            }
+                        });
+
+                    }
+
+                }else{
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            new Alert(Alert.AlertType.ERROR, "IP Maybe Incorrect or Empty").showAndWait();
+                            btnServerIP.setDisable(false);
+                        }
+                    });
+
+                }
+
+
+
+            }
+        }.start();
+    }
+
+    private boolean validateAddress(){
+        try {
+            Pattern pattern = Pattern.compile("(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)");
+            Matcher matcher = pattern.matcher(txtIpAddress.getText());
+            if (matcher.find())
+                return true;
+        }catch (Exception e){System.out.println("Plxz syop i am in validate address"+e.getStackTrace());}
+        return false;
     }
 }

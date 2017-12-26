@@ -1,43 +1,19 @@
-#Pane
+#mainPane
 {
-  -fx-background-image:url('../../resources/loginBackground.jpg');
    -fx-font-family: sans-serif;
+    -fx-background-color: #4ec1e3 ;
 }
 
-#Pane2{
-    -fx-background-color:#1b2737;
-   // -fx-border-color: #41464b;
-    //-fx-opacity: 0.8;
-
+#dataPane{
+    -fx-background-color: #4ec1e3;
+    -fx-opacity: 1.5;
 }
+
 .input{
-    //-fx-background-color: rgb(255,255,255,0.3);
     -fx-text-fill:#41464b;
     -fx-prompt-text-fill:#64707B;
 }
 
-
-#Login:hover{
-     -fx-cursor:HAND;
-    -fx-background-color: #000031;
-
-    //-fx-background-radius: 50;
-
-}
-
-#Login:hover #loginIcon {
-    -fx-fill:white;
-}
-
-#Login{
-
-    -fx-background-color: white;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;
-
-     -fx-background-radius: 50;
-      //-fx-background-insets: 0,1,2;
- }
 #Username {
     -fx-width: 365px;
     -fx-height: 49px;
@@ -45,34 +21,55 @@
     -fx-outline: transparent;
     -fx-background-repeat: no-repeat;
     -fx-background-position:right;
-
-    //-fx-background-color:rgba(156,157,158,0.3);
 }
 
 #usernameLabel,#passwordLabel{
     -fx-text-fill:#41464B;
 }
-#Password{
 
+#Password{
     -fx-background-repeat: no-repeat;
     -fx-background-position:right;
 }
-
 
 #header{
     -fx-font-weight: bold;
     -fx-font-size: 40px;
     -fx-padding: 10px;
     -fx-text-align: center;
-    //-fx-background-image: url('../../resources/');
 }
 
 #usernameLabel, #passwordLabel {
-    -fx-text-fill: #03a9f4;
+    -fx-text-fill: #41464B;
 }
 
+#ipAddressPane{
+    -fx-background-color: #EFEFEF;
+    -fx-opacity: 1.0;
+}
 
+#centerServerIP{
+    -fx-background-color: #1A1A1A;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.8), 30, 0.3, 0, 0); 
+}
 
 .image-icon{
     -fx-border-radius: 50%;
+}
+
+#Login:hover #loginIcon {
+    -fx-fill: #FFFFFF;
+}
+
+#Login:hover{
+    -fx-background-color: #41464b;
+}
+
+#Login:hover, #btnServerIP:hover{
+    -fx-cursor: HAND;
+}
+
+#Login, #btnServerIP{
+    -fx-border: none;
 }

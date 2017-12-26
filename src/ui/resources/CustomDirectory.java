@@ -21,6 +21,7 @@ public class CustomDirectory extends TreeView<String> {
     private String fileStructure;
     private CheckBoxTreeItem<String> directoryRoot,c1,c2;
     private ArrayList<String> fileList;
+    private String fileStart;
 
 
    public CustomDirectory(String fileStructure){
@@ -39,7 +40,8 @@ public class CustomDirectory extends TreeView<String> {
             @Override
             public void handle(CheckBoxTreeItem.TreeModificationEvent<String> event) {
                 CheckBoxTreeItem<String> treeItem=event.getTreeItem();
-                String value=getFullPath(treeItem);
+                System.out.println("Value of file start is "+fileStart);
+                String value=fileStart+"\\"+getFullPath(treeItem);
                 if(event.wasSelectionChanged()){
                     if(treeItem.isLeaf()) {
                         if (treeItem.isSelected()) {
@@ -66,7 +68,7 @@ public class CustomDirectory extends TreeView<String> {
         CheckBoxTreeItem<String> current=item;
         while(current.getParent()!=null){
             current=(CheckBoxTreeItem<String>) current.getParent();
-            fullPath=current.getValue().concat("/"+fullPath);
+            fullPath=current.getValue().concat("\\"+fullPath);
         }
         return fullPath;
     }
@@ -76,17 +78,24 @@ public class CustomDirectory extends TreeView<String> {
         int trimIndex,arrayIndex=0;
         Stack<String> stack=new Stack();
         String str=s;
-        String strArray[]=new String[50];
+        String strArray[]=new String[500];
         String nodeString;
 
-        if(str.indexOf(':')==-1){
+
+        if(str.indexOf('>')==-1){
             root=new CheckBoxTreeItem(str);
             root.setGraphic(getIcon(str));
             //if(!isRoot)
                 //root.addEventHandler(CheckBoxTreeItem.checkBoxSelectionChangedEvent(),this);
         }
         else {
-            nodeString = str.substring(0, str.indexOf(":"));
+            nodeString = str.substring(0, str.indexOf(">"));
+            if(isRoot){
+
+                fileStart=str.substring(0,nodeString.lastIndexOf('\\'));
+                System.out.println("Value of filestart is"+fileStart);
+            }
+            nodeString=nodeString.substring(nodeString.lastIndexOf('\\')+1);
             root = new CheckBoxTreeItem(nodeString);
             root.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.FOLDER));
             //if(!isRoot)
@@ -107,7 +116,7 @@ public class CustomDirectory extends TreeView<String> {
                         }
                     }
                 } else if (str.charAt(i) == ',') {
-                    if (str.substring(trimIndex, i).indexOf(':') == -1) {
+                    if(str.substring(trimIndex, i).indexOf('>') == -1) {
                         strArray[arrayIndex++] = str.substring(trimIndex, i);
                         trimIndex = i + 1;
                     }
@@ -115,7 +124,7 @@ public class CustomDirectory extends TreeView<String> {
                     strArray[arrayIndex++] = str.substring(trimIndex, i + 1);
                 }
             }
-            System.out.println("After this" + strArray[arrayIndex-1]);
+//            System.out.println("After this" + strArray[arrayIndex-1]);
             for (int i = 0; i < arrayIndex; i++) {
                 root.getChildren().add(makeTree(strArray[i],false));
             }

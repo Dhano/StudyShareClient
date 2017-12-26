@@ -98,9 +98,10 @@ public class Comms /*implements Runnable*/ {
                             System.out.println(serverRequest);
                             Comms.this.readyToRead = true;//Once the request is performed the code is ready to run the sub loop is ready to read the server's response
                             while (Comms.this.readyToRead) {
-                                System.out.println(serverRequest + "123");
+                               // System.out.println(serverRequest + "123");
                                 String serverResponse;
                                 if (Comms.this.serverRequest.equals(ServerRequestConstants.LIST_REQUEST)) {
+                                    System.out.println("I am here after the thread");
                                     serverResponse = Comms.this.serverReader.readLine();//if the server response is not null and the call to setserverRequest() was done with LIST_REQUEST
                                     System.out.println("Here");
                                     //Comms.this.getOptions(serverResponse);
@@ -119,6 +120,7 @@ public class Comms /*implements Runnable*/ {
                             }
                             serverRequest = "";
                         } else if (Comms.this.commandProperty.getValue().equals(CommsMessages.START_DOWNLOADING)) {
+                            System.out.println("About to complete project");
                             File directory = new File(System.getProperty("user.dir") + "/StudyShareDownloads");
                             if (!directory.exists())
                                 directory.mkdir();
@@ -128,7 +130,7 @@ public class Comms /*implements Runnable*/ {
                             //int lengthOfEachFile = 100 / filesListToBeRequested.size();
                             //while (i < filesListToBeRequested.size()) {
                             String path = filesListToBeRequested.get(i++);
-                            System.out.println(path);
+                            System.out.println("Path of comms"+path);
                             File newFile = new File(directory + File.separator + path.substring(path.lastIndexOf(File.separator), path.length()) + ".zip");
                             try {
                                 FileOutputStream fos = new FileOutputStream(newFile);
@@ -220,9 +222,10 @@ public class Comms /*implements Runnable*/ {
                 System.out.println(temp);
                 if (temp.equals("verified")) {
                     System.out.println(temp);
-                    System.out.println(serverReader.readLine());
-                    System.out.println("After this");
                     Comms.this.run();//MAKE THE THREAD ONLY IF THE CLIENT IS AUTHENTICATE
+                    this.setServerRequest(ServerRequestConstants.LIST_REQUEST);
+                    //System.out.println(serverReader.readLine());
+                    System.out.println("After this");
                     authenticationStatus = true;
                     return true;
                 }
@@ -233,4 +236,34 @@ public class Comms /*implements Runnable*/ {
         }
         return true;
     }
+
+    public ArrayList<File> getDownloadedFiles(){
+        try {
+            ArrayList<File> fileList = null;
+            File file = new File(System.getProperty("user.dir") + "/StudyShareDownloads");
+            if (!file.exists())
+                return null;
+            fileList = new ArrayList<>();
+            createFileList(file, fileList);
+            return fileList;
+        }catch (NullPointerException npe){
+            System.out.println("OOps file not found in comms getDownloaded files");
+        }
+        catch (Exception e){
+            System.out.println("OOps some other kind of exception in getDownloaded files"+e);
+        }
+        return null;
+    }
+
+    private void createFileList(File file,ArrayList<File> fileArrayList){
+        if(file.isDirectory()) {
+            File files[] = file.listFiles();
+            for(File f:files){
+                createFileList(f,fileArrayList);
+            }
+            return;
+        }
+        fileArrayList.add(file);
+    }
+
 }

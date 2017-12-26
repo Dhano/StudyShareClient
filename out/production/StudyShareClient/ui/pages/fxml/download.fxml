@@ -13,7 +13,7 @@
       <Screen fx:factory="getPrimary" fx:id="screen"/>
    </fx:define>
    <children>
-      <ScrollPane layoutX="171.0" layoutY="48.0" prefHeight="400.0" prefWidth="200.0" fx:id="scrollPane">
+      <ScrollPane layoutX="171.0" layoutY="48.0" prefHeight="800.0" prefWidth="800.0" fx:id="scrollPane">
          <content>
          </content>
       </ScrollPane>
