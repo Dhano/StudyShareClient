@@ -1,0 +1,6 @@
+.lblStyles{
+    -fx-background-color: lightgray;
+    -fx-text-fill: black;
+    -fx-text-align: center;
+    -fx-padding: 0 30px 0 30px;
+}

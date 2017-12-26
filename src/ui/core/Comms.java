@@ -128,22 +128,22 @@ public class Comms /*implements Runnable*/ {
                             //int readData;
                             int i = 0;
                             //int lengthOfEachFile = 100 / filesListToBeRequested.size();
-                            //while (i < filesListToBeRequested.size()) {
-                            String path = filesListToBeRequested.get(i++);
-                            System.out.println("Path of comms"+path);
-                            File newFile = new File(directory + File.separator + path.substring(path.lastIndexOf(File.separator), path.length()) + ".zip");
-                            try {
-                                FileOutputStream fos = new FileOutputStream(newFile);
-                                DataOutputStream dos = new DataOutputStream(fos);
-                                int perclength = Integer.parseInt(downloadStream.readUTF());
-                                System.out.println(perclength);
-                                int t[] = new int[1];
-                                t[0] = 0;
-                                System.out.println("Starting to download");
+                            while (i < filesListToBeRequested.size()) {
+                                String path = filesListToBeRequested.get(i++);
+                                System.out.println("Path of comms" + path);
+                                File newFile = new File(directory + File.separator + path.substring(path.lastIndexOf(File.separator), path.length()) + ".zip");
+                                try {
+                                    FileOutputStream fos = new FileOutputStream(newFile);
+                                    DataOutputStream dos = new DataOutputStream(fos);
+                                    int perclength = Integer.parseInt(downloadStream.readUTF());
+                                    System.out.println(perclength);
+                                    int t[] = new int[1];
+                                    t[0] = 0;
+                                    System.out.println("Starting to download");
 
-                                for (t[0] = 0; t[0] < perclength; t[0]++) {
-                                    byte bytes = downloadStream.readByte();
-                                    dos.write(bytes);
+                                    for (t[0] = 0; t[0] < perclength; t[0]++) {
+                                        byte bytes = downloadStream.readByte();
+                                        dos.write(bytes);
                                        /* Platform.runLater(new Runnable() {
                                             @Override
                                             public void run() {
@@ -151,15 +151,16 @@ public class Comms /*implements Runnable*/ {
                                                 //pgb.setProgress(((t[0]++) / lengthOfEachFile) * 100);
                                             }
                                         });*/
+                                    }
+
+                                    dos.close();
+                                    fos.close();
+
+                                    System.out.println("Hellooooooo");
+                                } catch (Exception e) {
+                                    e.printStackTrace();
                                 }
-                                dos.close();
-                                fos.close();
-
-                                System.out.println("Hellooooooo");
-                            } catch (Exception e) {
-                                e.printStackTrace();
                             }
-
                             filesListToBeRequested = null;
                             Comms.this.commandProperty.setValue(CommsMessages.DOWNLOAD_COMPLETED); //CHECK FOR THIS VALUE IN THE changedEvent CALLBACK AND ROLLBACK THE CLIENT TO GET MORE FILES TO BE DOWNLOADE
                             downloadStatus = true;

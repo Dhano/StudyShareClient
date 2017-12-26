@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.*?>
+<?import javafx.stage.Screen?>
+
+
+<!--prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}"-->
+<AnchorPane stylesheets="@../../css/userProfile.css" fx:id="root" prefHeight="820" prefWidth="670" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ui.pages.UserProfile">
+  <fx:define>
+    <Screen fx:factory="getPrimary" fx:id="screen" />
+  </fx:define>
+  <children>
+    <Label styleClass="lblStyles" prefWidth="150" prefHeight="40" layoutX="110.0" layoutY="120.0" text="Username" />
+    <Label styleClass="lblStyles" prefWidth="150" prefHeight="40" layoutX="110.0" layoutY="200.0" text="Password" />
+    <Label layoutX="300.0" layoutY="34.0" text="" />
+    <Label fx:id="lbl_password" layoutX="270.0" layoutY="120.0" text="Label" />
+    <Label fx:id="lbl_username" layoutX="270.0" layoutY="120.0" text="Label" />
+    <ImageView fx:id="user_image" fitHeight="253.46119689941406" fitWidth="450.81770978709676" layoutX="321.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../../../../Pictures/Screenshots/Screenshot%20(133).png" />
+      </image>
+    </ImageView>
+    <Button fx:id="btn_upload" layoutX="212.0" layoutY="364.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="33.0" prefWidth="460.0" text="Upload!" />
+  </children>
+</AnchorPane>

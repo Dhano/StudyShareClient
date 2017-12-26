@@ -24,6 +24,8 @@ public class ClientUi extends Application implements ScreenSize {
             primaryStage.setTitle("StudyShare");
             System.out.println(ScreenSize.MAX_SCREEN_WIDTH);
             scene=new Scene(root,ScreenSize.MAX_SCREEN_WIDTH*0.6,ScreenSize.MAX_SCREEN_HEIGHT*0.91);
+            System.out.println(ScreenSize.MAX_SCREEN_WIDTH*0.6);
+            System.out.println(ScreenSize.MAX_SCREEN_HEIGHT*0.91);
             scene.getStylesheets().add(getClass().getResource("pages//css//applicationStyles.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.show();

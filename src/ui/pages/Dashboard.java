@@ -65,6 +65,7 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
     Recent recent;
     ScrollableRecent scrollableRecent;
     Download download;
+    UserProfile userProfile;
 
     //RecentsController recentsController;
 
@@ -74,7 +75,7 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
 
     /*Supporting Objects*/
     TranslateTransition translateTransitionForDashboard;
-    FXMLLoader downloadLoader,recentLoader,scrollableRecentLoader;
+    FXMLLoader downloadLoader,recentLoader,scrollableRecentLoader,userProfileLoader;
     String treeString;
     boolean showDownload=false;
     /*Supporting object for core part*/
@@ -99,6 +100,7 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
             //initClientCore();
         }catch(Exception e){
             System.out.println("Inside initiakize in pagekeeper"+e);
+            e.printStackTrace();
         }
         System.out.println("End of PageKeeper");
     }
@@ -119,6 +121,13 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
             downloadLoader.load();
             download=(Download) downloadLoader.getController();
             System.out.println("*****************************"+download);
+
+            userProfileLoader=new FXMLLoader();
+            userProfileLoader.setLocation(getClass().getResource("fxml//userProfile.fxml"));
+            userProfileLoader.load();
+            userProfile=(UserProfile) userProfileLoader.getController();
+
+
 
             /*FOR MAIN DISPLAY*/
             scrollableRecentLoader=new FXMLLoader();
@@ -179,7 +188,7 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
         AnchorPane.setTopAnchor(defaultHolderTitle,new Double("10"));
         AnchorPane.setLeftAnchor(defaultHolderTitle,new Double("340"));
         defaultHolderTop.getChildren().addAll(show_dashboard,defaultHolderTitle);
-        System.out.println("*********************************************"+scrollableRecent.getRoot());
+//        System.out.println("*********************************************"+scrollableRecent.getRoot());
        // defaultHolder.setBottom(scrollableRecent.getRoot());
         //defaultHolder.setCenter(yourIp.getRoot("192.767867"));
     }
@@ -188,11 +197,13 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
         JFXButton hide_dashBoard;
         JFXButton showRecentPage;
         JFXButton showDownloadPage;
+        JFXButton showUserProfile;
         FontAwesomeIconView hide_dashboard_icon;
 
         showDownloadPage=new JFXButton("Download");
         hide_dashBoard=new JFXButton();
         showRecentPage=new JFXButton("Recents");
+        showUserProfile=new JFXButton("UserProfile");
 
         hide_dashboard_icon = new FontAwesomeIconView(FontAwesomeIcon.REMOVE);
         hide_dashboard_icon.getStyleClass().add("hide_icon");
@@ -210,6 +221,14 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
                 dashboardHolder.setVisible(false);
                 pageHolder.setVisible(true);
                 pageManager.setCurrentPageIndex(PageContantsForDashboard.RECENT_PAGE);
+            }
+        });
+        showUserProfile.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                dashboardHolder.setVisible(false);
+                pageHolder.setVisible(true);
+                pageManager.setCurrentPageIndex(PageContantsForDashboard.USER_PROFILE);
             }
         });
         showDownloadPage.setOnAction(new EventHandler<ActionEvent>() {
@@ -235,8 +254,11 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
         AnchorPane.setLeftAnchor(showRecentPage,new Double("50"));
         AnchorPane.setTopAnchor(showDownloadPage,new Double("200"));
         AnchorPane.setLeftAnchor(showDownloadPage,new Double("50"));
+        AnchorPane.setTopAnchor(showUserProfile,new Double("300"));
+        AnchorPane.setLeftAnchor(showUserProfile,new Double("50"));
 
-        dashBoardControlsHolder.getChildren().addAll(hide_dashBoard,showRecentPage,showDownloadPage);
+
+        dashBoardControlsHolder.getChildren().addAll(hide_dashBoard,showRecentPage,showDownloadPage,showUserProfile);
 
         dashboardHolder.setVisible(false);
     }
@@ -320,7 +342,8 @@ public class Dashboard implements PageConstants,BasicController,CommsMessages{
             if(treeString==null)
                 treeString="C:{A,b,c,}";
             return download.getRoot(treeString);
-        }
+        }if(pageIndex==PageContantsForDashboard.USER_PROFILE){
+            return userProfile.getRoot();}
 
         return new Button("Dhananjay");
     }

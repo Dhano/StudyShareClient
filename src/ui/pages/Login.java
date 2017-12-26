@@ -194,6 +194,8 @@ public class Login implements PageConstants,BasicController{
 
                 System.out.println("Value of pagekeeper"+pageKeeper);
                 if(c.checkAuthentication(username.getText(),password.getText())) {
+                    ObjectCacher.getObjectCacher().put(String.class,username.getText()+">"+password.getText());
+
                     System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
                     pageKeeper.pageManager.setCurrentPageIndex(PageConstants.DASHBOARD_PAGE);
                     Dashboard dashboard=(Dashboard) ObjectCacher.getObjectCacher().get(Dashboard.class);
