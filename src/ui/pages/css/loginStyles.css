@@ -73,3 +73,7 @@
 #Login, #btnServerIP{
     -fx-border: none;
 }
+
+#btnServerIP:hover #unlockIcon {
+    -fx-fill: #FFFFFF;
+}

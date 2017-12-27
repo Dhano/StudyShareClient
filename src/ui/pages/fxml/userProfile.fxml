@@ -9,7 +9,7 @@
 <?import javafx.stage.*?>
 <?import javafx.stage.Screen?>
 
-<AnchorPane fx:id="root" maxWidth="0.0" minWidth="-1.0" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" stylesheets="../css/userProfile.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ui.pages.UserProfile">
+<AnchorPane fx:id="root" maxWidth="0.0" minWidth="-1.0" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" stylesheets="@../../css/userProfile.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ui.pages.UserProfile">
   <fx:define>
     <Screen fx:factory="getPrimary" fx:id="screen" />
   </fx:define>

@@ -38,8 +38,13 @@
 
             <AnchorPane id="ipAddressPane" layoutX="-160" layoutY="-130" prefHeight="700" prefWidth="820" fx:id="ipPane" styleClass="ip_pane">
                 <AnchorPane id="centerServerIP" fx:id="centerServerIP" layoutX="130" layoutY="160" prefHeight="350" prefWidth="550">
-                    <TextField id="txtIpAddress" fx:id="txtIpAddress" layoutX="95" layoutY="80.0" prefHeight="55.0" prefWidth="365.0" styleClass="input" promptText="Enter the Server IP" />
+                    <CustomTextField id="txtIpAddress" fx:id="txtIpAddress" layoutX="95" layoutY="80.0" prefHeight="55.0" prefWidth="365.0" styleClass="input" promptText="Enter the Server IP" />
                     <Button id="btnServerIP" fx:id="btnServerIP" layoutY="150" layoutX="115" prefHeight="55.0" prefWidth="325.0" text="Connect To Server" onAction="#serverCheck" styleClass="input, btn-general, btn-blue"></Button>
+                    <ImageView layoutX="180" layoutY="200" id="loadIcon" fx:id="loadingIcon">
+                        <image>
+                            <Image url="@../../../resources/loading.gif" requestedWidth="180" preserveRatio="true"></Image>
+                        </image>
+                    </ImageView>
                 </AnchorPane>
             </AnchorPane>
         </AnchorPane>

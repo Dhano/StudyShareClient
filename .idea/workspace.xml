@@ -2,39 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/pages/css/userProfile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StudyShareDownloads/RC_reactor.png.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StudyShareDownloads/roses.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/core/Comms$1.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/core/Comms$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/core/Comms.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/core/Comms.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$1.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$2.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$3.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$4.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$5.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$6.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$7.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$8.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$9.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Dashboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/DisplayYourIp.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/DisplayYourIp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$2.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$1.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$2.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$3.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$4.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/constants/PageContantsForDashboard.class" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/constants/PageContantsForDashboard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/css/applicationStyles.css" afterPath="$PROJECT_DIR$/out/production/StudyShareClient/ui/pages/css/applicationStyles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/ClientUi.java" afterPath="$PROJECT_DIR$/src/ui/ClientUi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/core/Comms.java" afterPath="$PROJECT_DIR$/src/ui/core/Comms.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/Dashboard.java" afterPath="$PROJECT_DIR$/src/ui/pages/Dashboard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/Login.java" afterPath="$PROJECT_DIR$/src/ui/pages/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/constants/PageContantsForDashboard.java" afterPath="$PROJECT_DIR$/src/ui/pages/constants/PageContantsForDashboard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/css/applicationStyles.css" afterPath="$PROJECT_DIR$/src/ui/pages/css/applicationStyles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/css/loginStyles.css" afterPath="$PROJECT_DIR$/src/ui/pages/css/loginStyles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/fxml/download.fxml" afterPath="$PROJECT_DIR$/src/ui/pages/fxml/download.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/fxml/login.fxml" afterPath="$PROJECT_DIR$/src/ui/pages/fxml/login.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml" afterPath="$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,64 +64,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserProfile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/pages/UserProfile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationStyles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/pages/css/applicationStyles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userProfile.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/pages/css/userProfile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userProfile.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
+      <file leaf-file-name="download.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/download.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientUi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/ClientUi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="27" column="66" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+            <state relative-caret-position="170">
+              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginStyles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/pages/css/loginStyles.css">
+      <file leaf-file-name="Download.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/pages/Download.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="850">
+              <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -176,6 +108,8 @@
       <find>start down</find>
       <find>Start</find>
       <find>Start Downloading</find>
+      <find>va</find>
+      <find>vali</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Dhananjay\IdeaProjects\StudyShareClient\src\ui\pages\utilities</dir>
@@ -212,11 +146,9 @@
         <option value="$PROJECT_DIR$/src/ui/pages/fxml/demo.fxml" />
         <option value="$PROJECT_DIR$/src/ui/core/CommsDriver.java" />
         <option value="$PROJECT_DIR$/src/ui/pages/IPAddress.java" />
-        <option value="$PROJECT_DIR$/src/ui/pages/fxml/download.fxml" />
         <option value="$PROJECT_DIR$/src/ui/resources/CustomDirectory.java" />
         <option value="$PROJECT_DIR$/src/ui/pages/Download.java" />
         <option value="$PROJECT_DIR$/src/ui/core/Comms.java" />
-        <option value="$PROJECT_DIR$/src/ui/pages/Login.java" />
         <option value="$PROJECT_DIR$/src/ui/pages/constants/PageContantsForDashboard.java" />
         <option value="$PROJECT_DIR$/src/ui/pages/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/ui/pages/UserProfile.java" />
@@ -225,11 +157,13 @@
         <option value="$PROJECT_DIR$/src/ui/pages/css/userProfile.css" />
         <option value="$PROJECT_DIR$/src/ui/ClientUi.java" />
         <option value="$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/pages/Login.java" />
+        <option value="$PROJECT_DIR$/src/ui/pages/fxml/download.fxml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1377" />
     <option name="height" value="735" />
@@ -253,67 +187,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="StudyShareClient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StudyShareClient" type="462c0819:PsiDirectoryNode" />
-              <item name="StudyShareDownloads" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +241,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ui/vendors/jfoenix/jfoenix.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -521,23 +435,23 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1377" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25832012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2305141" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2574032" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25622255" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -658,13 +572,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/dashboard.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/css/downloadStyles.css">
@@ -689,13 +603,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/ipAddress.fxml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/event/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/event/EventHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/demo.fxml" />
     <entry file="file://$PROJECT_DIR$/src/ui/pages/css/dashboardStyles.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -708,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,50 +627,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/IPAddress.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="742" column="16" lean-forward="false" selection-start-line="742" selection-start-column="16" selection-end-line="742" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/download.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StudyShareDownloads/roses.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/Download.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Thread.java" />
+    <entry file="file://$PROJECT_DIR$/StudyShareDownloads/roses.jpg" />
     <entry file="file://$PROJECT_DIR$/src/ui/resources/CustomDirectory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="94" column="48" lean-forward="false" selection-start-line="94" selection-start-column="48" selection-end-line="94" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="256" column="61" lean-forward="false" selection-start-line="256" selection-start-column="61" selection-end-line="256" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -776,14 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/PageKeeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/constants/PageContantsForDashboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -792,69 +653,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="167" lean-forward="false" selection-start-line="13" selection-start-column="141" selection-end-line="13" selection-end-column="167" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/pageKeeper.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/pageKeeper.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="181" lean-forward="false" selection-start-line="5" selection-start-column="97" selection-end-line="5" selection-end-column="181" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/scrollableRecent.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/scrollableRecent.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/css/loginStyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="748">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -862,7 +687,7 @@
     <entry file="file://$PROJECT_DIR$/src/ui/pages/css/applicationStyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -875,6 +700,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="167" lean-forward="false" selection-start-line="13" selection-start-column="141" selection-end-line="13" selection-end-column="167" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="11" column="157" lean-forward="false" selection-start-line="11" selection-start-column="157" selection-end-line="11" selection-end-column="157" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="256" column="61" lean-forward="false" selection-start-line="256" selection-start-column="61" selection-end-line="256" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="226" column="5" lean-forward="true" selection-start-line="226" selection-start-column="5" selection-end-line="226" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/PageKeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/css/userProfile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -883,15 +756,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/userProfile.fxml">
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/UserProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="86">
+          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/Download.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/pages/fxml/download.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

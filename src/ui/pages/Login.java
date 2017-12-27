@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -27,6 +28,7 @@ import ui.pages.constants.PageConstants;
 import ui.pages.utilities.ObjectCacher;
 
 import javax.swing.*;
+import javax.swing.text.html.ImageView;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.util.regex.Matcher;
@@ -51,7 +53,9 @@ public class Login implements PageConstants,BasicController{
     @FXML
     Label passwordlbl;
     @FXML
-    TextField txtIpAddress;
+    CustomTextField txtIpAddress;
+    @FXML
+    javafx.scene.image.ImageView loadingIcon;
     /*object of other fxml*/
     PageKeeper pageKeeper;
 
@@ -63,7 +67,9 @@ public class Login implements PageConstants,BasicController{
 
 
     @FXML protected void initialize(){
-        System.out.println("The vlaue of the location is"+System.getProperty("user.dir"));
+
+        loadingIcon.setSmooth(true);
+        loadingIcon.setVisible(false);
         Icons525View lockIcon = new Icons525View(Icons525.LOCK);
         //lockIcon.setStyle("-fx-fill: #8A0808;");
         lockIcon.setFill(Color.web("#4ec1e3"));
@@ -72,6 +78,16 @@ public class Login implements PageConstants,BasicController{
         userIcon.setFill(Color.web("#4ec1e3"));
         userIcon.setStyle("-glyph-size:28px;");
 
+        FontAwesomeIconView serverIcon = new FontAwesomeIconView(FontAwesomeIcon.SERVER);
+        serverIcon.setFill(Color.web("#4ec1e3"));
+        serverIcon.setStyle("-glyph-size:28px;");
+        txtIpAddress.setLeft(serverIcon);
+        //txtIpAddress.setStyle("-fx-box-shadow: inset 1px 1px rgba();");
+        FontAwesomeIconView unlockIcon = new FontAwesomeIconView(FontAwesomeIcon.UNLOCK_ALT);
+        unlockIcon.setFill(Color.web("4ec1e3"));
+        unlockIcon.setStyle("-glyph-size:28px;");
+        unlockIcon.setId("unlockIcon");
+        btnServerIP.setGraphic(unlockIcon);
 
         FontAwesomeIconView loginIcon = new FontAwesomeIconView(FontAwesomeIcon.SIGN_OUT);
         loginIcon.setFill(Color.web("#4ec1e3"));
@@ -185,8 +201,6 @@ public class Login implements PageConstants,BasicController{
     }
     @FXML protected void validateLogin(ActionEvent ae)
     {
-        username.setText("Ashu");
-        password.setText("helloWorld123");
         Comms c= (Comms) ObjectCacher.getObjectCacher().get(Comms.class);
         try {
             if (validateUsername(ae) && validatePassword(ae)) {
@@ -195,10 +209,9 @@ public class Login implements PageConstants,BasicController{
                 System.out.println("Value of pagekeeper"+pageKeeper);
                 if(c.checkAuthentication(username.getText(),password.getText())) {
                     ObjectCacher.getObjectCacher().put(String.class,username.getText()+">"+password.getText());
-
                     System.out.println("YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
                     pageKeeper.pageManager.setCurrentPageIndex(PageConstants.DASHBOARD_PAGE);
-                    Dashboard dashboard=(Dashboard) ObjectCacher.getObjectCacher().get(Dashboard.class);
+                    Dashboard dashboard = (Dashboard) ObjectCacher.getObjectCacher().get(Dashboard.class);
                     dashboard.initClientCore();
                 }
             } else {
@@ -256,35 +269,41 @@ public class Login implements PageConstants,BasicController{
     public void serverCheck(ActionEvent actionEvent) {
 
         btnServerIP.setDisable(true);
+        ipPane.setCursor(Cursor.WAIT);
+        loadingIcon.setVisible(true);
         new Thread(){
             public void run(){
 
-                System.out.println("Inisde call of server check");
+                System.out.println("Inside call of server check");
                 if(validateAddress()) {
                     try {
                         System.out.println("Value of ipAddress is"+txtIpAddress.getText());
                         Socket user = new Socket(txtIpAddress.getText(), 44444);
                         System.out.println(user);
                         Comms c = new Comms(user.getInetAddress());
+                        System.out.println("Yoo passedd it");
                         ObjectCacher.getObjectCacher().put(Comms.class, c);
-
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
                                 new Alert(Alert.AlertType.INFORMATION, "Successfully Connnected").showAndWait();
+                                loadingIcon.setVisible(false);
                                 animateOut();
                             }
                         });
 
                     } catch (ConnectException connect) {
+                        connect.printStackTrace();
                         System.out.println("Opps connect Exception");
                         System.out.println("Something is wrong");
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
+                                btnServerIP.setDisable(false);
+                                ipPane.setCursor(Cursor.DEFAULT);
+                                loadingIcon.setVisible(false);
                                 new Alert(Alert.AlertType.ERROR, "ConnnectException, IP Maybe Incorrect").showAndWait();
                                 txtIpAddress.setText("");
-                                btnServerIP.setDisable(false);
                             }
                         });
 
@@ -294,9 +313,11 @@ public class Login implements PageConstants,BasicController{
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
+                                btnServerIP.setDisable(false);
+                                ipPane.setCursor(Cursor.DEFAULT);
+                                loadingIcon.setVisible(false);
                                 new Alert(Alert.AlertType.ERROR, "Some other Kind Exception").showAndWait();
                                 txtIpAddress.setText("");
-                                btnServerIP.setDisable(false);
                             }
                         });
 
@@ -306,8 +327,10 @@ public class Login implements PageConstants,BasicController{
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            new Alert(Alert.AlertType.ERROR, "IP Maybe Incorrect or Empty").showAndWait();
                             btnServerIP.setDisable(false);
+                            ipPane.setCursor(Cursor.DEFAULT);
+                            loadingIcon.setVisible(false);
+                            new Alert(Alert.AlertType.ERROR, "IP Maybe Incorrect or Empty").showAndWait();
                         }
                     });
 
